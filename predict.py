@@ -4,14 +4,14 @@ import time
 
 os.environ["HF_HUB_OFFLINE"] = "1"
 os.environ["TRANSFORMERS_OFFLINE"] = "1"
-os.environ["HF_HOME"] = "/src/weights"
+os.environ["HF_HUB_CACHE"] = "/src/hf-cache"
 
 import numpy as np
 import torch
 from cog import BasePredictor, Input, Path
 from PIL import Image
 
-WEIGHTS_DIR = "/src/weights/ndvi-tokenizer"
+WEIGHTS_DIR = "/src/hf-cache"
 
 
 class Predictor(BasePredictor):
